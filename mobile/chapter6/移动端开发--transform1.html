@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform</title>
+</head>
+<body>
+    变换
+    transform:    -webkit-transform
+
+    1、transform 2d样式
+            rotate 旋转 (deg)
+
+            skew 斜切 (deg)
+            skewX
+            skewY
+
+            scale 缩放 (原始大小的多少倍)(x,y)
+            scaleX
+            scaleY
+
+            translate 位移（px）
+            translateX
+            translateY
+
+            transform-origin: center center;//原点位置
+            关键字
+            百分比
+            距离单位(px,em,rem...)
+        注意：设置的时候记得写手机端兼容
+            eg:-webkit-transform-origin: 0 0;transform-origin: 0 0;
+            执行顺序：先写后执行
+
+    2、transform 3d样式
+
+            rotateX/rotateY/rotateZ/rotate3d
+            translateX/translateY/translateZ/translate3d
+            perspective 景深(我在多远之外来看这个元素)
+            加给要做3d变换的元素的父级
+
+            transform-style 元素在做3d变换时，是否保留子元素的3d变换
+            flat 不保留
+            preserve-3d 保留子元素3D变换
+
+            隐藏背面
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    3、transform 矩阵
+
+        matrix(a,b,c,d,e,f) 矩阵函数
+        matrix(1,0,0,1,0,0)  默认值
+
+        通过矩阵实现缩放：
+            x轴:
+                a = a*x;
+                c = c*x;
+                e = e*x;
+
+            y轴:
+                b = b*x;
+                d = d*x;
+                f = f*x;
+        通过矩阵实现位移：
+            x轴： x = e + x;
+            y轴:  y = f + y;
+
+        先位移，再缩放：
+        位移-matrix(1, 0, 0, 1, 100, 100)
+        缩放-matrix(.5, 0, 0, .5, 50, 50)
+
+        先缩放，再位移：
+        缩放-matrix(.5, 0, 0, .5, 0, 0)
+        位移-matrix(.5, 0, 0, .5, 100, 100)
+
+        通过矩阵实现斜切：
+            正弦：Math.sin
+            余弦：Math.cos
+            正切：Math.tan
+            角度转弧度 = deg*Math.PI/180
+            x斜切：(deg)
+                c = Math.tan(xDeg/180*Math.PI);
+
+            y斜切：(deg)
+                b = Math.tan(yDeg/180*Math.PI);
+        通过矩阵实现旋转：
+            a = Math.cos(deg/180*Math.PI);
+            b = Math.sin(deg/180*Math.PI);
+            c = -Math.sin(deg/180*Math.PI);
+            d = Math.cos(deg/180*Math.PI);
+
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <title>rem计算小demo</title>
+    <link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script>
+        (function () {
+            /*这段js 主要作用：获取设备的宽度，设置根的字体大小*/
+            var html = document.documentElement;
+            var hWidth = html.getBoundingClientRect().width;
+            /*
+             getBoundingClientRect()用于获得页面中某个元素的左，上，右和下分别相对浏览器视窗的位置。
+             getBoundingClientRect()是DOM元素到浏览器可视范围的距离（不包含页面看不见的部分）。
+             该函数返回一个Object对象，该对象有6个属性：top, left, bottom, right, width, height；
+             这里的top、left和css中的理解很相似，width、height是元素自身的宽高，但是right，bottom和css中的理解有点不一样。
+             right是指元素右边界距窗口最左边的距离，bottom是指元素下边界距窗口最上面的距离。
+             */
+            html.style.fontSize = hWidth / 15 + "px";// 1rem==15px
+        })()
+    </script>
+</head>
+<body>
+    <header id="header">
+        <a id="task" href="javascript:;"><span class="glyphicon glyphicon-tasks"></span></a>
+        <h1><span class="glyphicon glyphicon-lock"></span>mike</h1>
+        <a id="refresh" href="javascript:;"><span class="glyphicon glyphicon-repeat"></span></a>
+    </header>
+    <nav id="nav">
+        <a class="active" href="javascript:;">综合<span class="glyphicon glyphicon-chevron-down"></span></a>
+        <a href="javascript:;">销量</a>
+        <a href="javascript:;">价格
+            <!--友情提示：span标签里面不要套div-->
+            <span id="spanBox">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        <span class="active glyphicon glyphicon-chevron-down"></span>
+                    </span>
+        </a>
+        <a href="javascript:;">筛选<span class="glyphicon glyphicon-filter"></span></a>
+    </nav>
+    <section id="wrap">
+        <ul id="list">
+            <li>
+                <a href="javascript:;">
+                    <img src="img/img.png"/>
+                    <span class="spanWrap">
+                                <span class="sTitle">苹果（Apple）iPhone 6(A1586) 16GB 金色 移动联通电信4G手机</span>
+                                <span class="sPrice">￥4888.00</span>
+                                <span class="sComment">好评96% 59091人</span>
+                            </span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="img/img.png"/>
+                    <span class="spanWrap">
+                                <span class="sTitle">苹果（Apple）iPhone 6(A1586) 16GB 金色 移动联通电信4G手机</span>
+                                <span class="sPrice">￥4888.00</span>
+                                <span class="sComment">好评96% 59091人</span>
+                            </span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="img/img.png"/>
+                    <span class="spanWrap">
+                                <span class="sTitle">苹果（Apple）iPhone 6(A1586) 16GB 金色 移动联通电信4G手机</span>
+                                <span class="sPrice">￥4888.00</span>
+                                <span class="sComment">好评96% 59091人</span>
+                            </span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="img/img.png"/>
+                    <span class="spanWrap">
+                                <span class="sTitle">苹果（Apple）iPhone 6(A1586) 16GB 金色 移动联通电信4G手机</span>
+                                <span class="sPrice">￥4888.00</span>
+                                <span class="sComment">好评96% 59091人</span>
+                            </span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="img/img.png"/>
+                    <span class="spanWrap">
+                                <span class="sTitle">苹果（Apple）iPhone 6(A1586) 16GB 金色 移动联通电信4G手机</span>
+                                <span class="sPrice">￥4888.00</span>
+                                <span class="sComment">好评96% 59091人</span>
+                            </span>
+                </a>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rem计算</title>
+</head>
+<body>
+        1.rem计算
+            设计图选取
+            利用less来自动计算rem
+            Koala(工具)
+        <!--
+                    rem / em
+                    rem  :root 根节点的字体大小进行计算的
+                    em   :相对于父级进行计算的
+        -->
+        如何使用Koala结合Less自动计算rem?
+        1.下载Koala软件安装
+        2.在你的项目中新建css文件和less文件,  eg: index.css index.less  PS:文件名要一致
+        3.打开软件，直接把你的css文件拖进软件中
+        4.在index.less,第一行写：@r:50rem;  50rem(是你自己的项目所自己定的大小)
+        5.这个大小计算：设计图的宽（750px）/html的字体大小（15px）  1rem==15px
+        6.所以css样式直接在index.less进行写，遇到设置px直接/@r eg:88px 替换 88/@r
+</body>
+</html>

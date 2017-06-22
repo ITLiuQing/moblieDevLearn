@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>响应式</title>
+</head>
+<body>
+    1、媒体类型
+                 all            所有媒体
+                 braille        盲文触觉设备
+                 embossed       盲文打印机
+                 print          手持设备
+        @media   projection     打印预览
+                 screen         彩屏设备
+                 speech         听觉类似的设备
+                 tty            不适用像素的设备
+                 tv             电视
+    2、关键字
+        and     连接      @media all and(min-width:780px)
+        not     排除      @media not tv
+        only    指定      @media only screen
+
+    3、媒体特性
+        width   文档宽度
+            注意：从小到大写
+            @media all and (min-width:400px ) {}
+            @media all and (min-width:600px ) {}
+            @media all and (min-width:800px ) {}
+            @media all and (min-width:1000px) {}
+        orientation  横竖屏
+            @media (orientation:portrait)   屏幕垂直
+            @media (orientation:landscape)   屏幕水平
+    4、样式引入方式
+        样式中末尾添加
+        @media all and(min-width:980px){}
+        link 标签
+        <link rel="stylesheet" href="" media="all and(min-width:80px)">
+        写在样式表头部
+        @important url() (max-width:1200px)
+    5、bootstrap
+        引入：
+        <meta name="viewport" content="width=device-width,user-scalable=no"/>
+        <link rel="stylesheet" type="text/css" href="bs/css/bootstrap.min.css"/>
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        布局容器：
+            .container  固定宽度        .container-fluid  100%宽度
+            .row
+                必须包含在container 或 container-fluid 中
+            .column
+                作为row 的直接子元素
+        栅格参数：
+            .col-xs-(1-12) 超小屏幕 手机 (<768px)
+            .col-sm-(1-12) 小屏幕 平板 (≥768px)
+            .col-md-(1-12) 中等屏幕 桌面显示器 (≥992px)
+            .col-lg-(1-12) 大屏幕 大桌面显示器 (≥1200px)
+        列偏移：
+            .col-md-offset-(1-11)  可以向右偏移
+        列排序：
+            .col-lg-push-(1-11) 向右移动
+            .col-md-pull-(1-11) 向左移动
+        显示隐藏：
+            .visble-md  显示
+            .hidden-lg  隐藏
+
+
+
+</body>
+</html>
