@@ -7,3 +7,4 @@
 * charper5: **三大事件**
 * charper6: **transform 基本设置**
 * charper6-1: **transform 动画**
+* charper7: **自定义滚动区域**
