@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>陀螺仪</title>
+</head>
+<body>
+    重力感应
+
+        devicemotion 检查手机晃动方法名
+        accelerationIncludingGravity  加速度对象
+        eg:
+            window.addEventListener('devicemotion', function(e) {
+                var motion = e.accelerationIncludingGravity;//获取加速度对象
+                var x = Math.round(motion.x);//获取x方向加速度
+                var y = Math.round(motion.y);//获取y方向加速度
+                var z = Math.round(motion.z;//获取z方向加速度
+            });
+        IOS 和 安卓的差异：
+            var u = navigator.userAgent;
+            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+            var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+
+        orientationchange  横竖屏切换方法名
+            window.addEventListener('orientationchange', function(e){
+                // window.orientation
+                // 横屏 90 -90
+                // 竖屏 0 - 180
+            });
+        deviceorientation  检测手机倾斜旋转
+            window.addEventListener('deviceorientation', function(e){
+                var x = Math.round(e.beta);
+                var y = Math.round(e.gamma);
+                var z = Math.round(e.alpha);
+            });
+
+
+</body>
+</html>
