@@ -9,3 +9,5 @@
 * charper6-1: **transform 动画**
 * charper7: **自定义滚动区域**
 * charper8: **陀螺仪操作**
+* charper9: **多指操作**
+* charper10: **下滑加载更多**
